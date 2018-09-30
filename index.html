@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="./v1hygiene.css">
+    <link rel="shortcut icon" href="./favicon.ico">
+
+    <title>VersionOne Dashboard</title>
+ 
+    <script src="https://vuejs.org/js/vue.js"></script>
+    <script src="./query-options.js"></script>
+    <script src="./query-item-list.js"></script>
+    <script src="./load-config.js"></script>
+    <script defer src="./hygiene-app.js"></script>
+  </head>
+
+  <body class="v1h-body">
+    <div id="app">
+        <div>
+            <span><img src='./logo.png' style="float:left" /> </span>
+            <h1 class="v1h-h1">{{title}}</h1>
+        </div>
+        
+        <query-options
+            v-bind:scope-val="this.selectedProject"
+            v-bind:first-team-filter="this.teamFilter"
+            v-on:project-changed="onProjectChanged"
+            v-on:team-changed="onTeamChanged" >
+        </query-options>
+
+        <query-item-list 
+            query-name="storynofeature" 
+            v-bind:scope-val="this.selectedProject"
+            v-bind:team-val="this.selectedTeam">
+        </query-item-list>
+
+        <query-item-list 
+            query-name="storynotype" 
+            v-bind:scope-val="this.selectedProject"
+            v-bind:team-val="this.selectedTeam">
+        </query-item-list>
+
+        <query-item-list 
+            query-name="featurenostatus" 
+            v-bind:scope-val="this.selectedProject"
+            v-bind:team-val="this.selectedTeam">
+        </query-item-list>
+        
+    </div>  
+  </body> 
+
+
+</html>
