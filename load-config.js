@@ -1,6 +1,6 @@
 // setup service URL for access by components (put your URL here)
 var appConfig = new Vue({data:{ 
-    serviceUrl: "http://localhost:8088",
+    serviceUrl: "http://localhost:3000",
     startingProject: "Sample: Company",
     startingTeamFilter: "Sample:" 
 }})

@@ -3,7 +3,7 @@
 APP_NAME=v1-hygiene-ui
 
 REPO_NAME=v1-hygiene-repository
-REPO_ADDRESS=701603852992.dkr.ecr.us-west-2.amazonaws.com
+REPO_ADDRESS=yourecr.dkr.ecr.us-west-2.amazonaws.com
 DATE_STR=`date -u +%Y%m%d_%H%M%SZ`
 SHA_STR=`git rev-parse HEAD | cut -c -12`
 
